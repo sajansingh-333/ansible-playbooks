@@ -1,0 +1,6 @@
+  
+---
+- hosts: all
+  tasks:
+    - name: Testing Ansible PlayBook
+      user: name="aravi" state=present
