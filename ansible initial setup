@@ -1,0 +1,15 @@
+yum install python python-pip python-setuptools*
+curl -O https://bootstrap.pypa.io/get-pip.py
+python get-pip.py
+pip install boto
+pip install boto3
+
+python --version
+pip --version
+
+yum install ansible git
+git clone https://github.com/techarkit/ansible-palybooks.git
+create a file names boto
+vi ./boto
+provide the Iam user access key and secret key in this file
+:wq!
