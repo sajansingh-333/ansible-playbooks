@@ -1,0 +1,18 @@
+#playbook to print contents in the directory.
+#using shell we run the ls /home/ansible
+#using register we saved the listed contents of output into the  dir_contents file
+#using debug: we tried to print the dir_contents file output
+
+
+
+---
+  - hosts: hostgroup
+    user: ansible
+    become: True
+  - tasks:
+      - name: list all the contents of directory
+        shell: ls /home/ansible
+        register: dir_contents
+      - name: print directory contents using loops
+        debug:
+          msg: "{{ dir_contents}}"
